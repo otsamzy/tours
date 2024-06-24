@@ -11,7 +11,7 @@ function App() {
   const DataFetched = async () => {
     setLoading(true);
     try {
-      const response = await fetch(url);
+      const response = await fetch(url, { mode: "no-cors" });
       const tours = await response.json();
       setLoading(false);
       setData(tours);
